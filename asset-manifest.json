@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/travel-trucks/static/css/main.7acaea2f.css",
+    "main.js": "/travel-trucks/static/js/main.07d3183d.js",
+    "index.html": "/travel-trucks/index.html",
+    "main.7acaea2f.css.map": "/travel-trucks/static/css/main.7acaea2f.css.map",
+    "main.07d3183d.js.map": "/travel-trucks/static/js/main.07d3183d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.07d3183d.js"
+  ]
+}
