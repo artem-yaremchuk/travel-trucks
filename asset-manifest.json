@@ -1,13 +1,22 @@
 {
   "files": {
-    "main.css": "/travel-trucks/static/css/main.48cdb441.css",
-    "main.js": "/travel-trucks/static/js/main.f3feb03a.js",
+    "main.css": "/travel-trucks/static/css/main.e1f7adfa.css",
+    "main.js": "/travel-trucks/static/js/main.9aacd1b0.js",
+    "static/js/544.ebbd5ede.chunk.js": "/travel-trucks/static/js/544.ebbd5ede.chunk.js",
+    "static/js/822.0c4712d2.chunk.js": "/travel-trucks/static/js/822.0c4712d2.chunk.js",
+    "static/js/957.116d7878.chunk.js": "/travel-trucks/static/js/957.116d7878.chunk.js",
+    "static/js/459.68ec33dc.chunk.js": "/travel-trucks/static/js/459.68ec33dc.chunk.js",
+    "static/js/406.f935a62c.chunk.js": "/travel-trucks/static/js/406.f935a62c.chunk.js",
+    "static/js/733.1693e1fa.chunk.js": "/travel-trucks/static/js/733.1693e1fa.chunk.js",
+    "static/media/Inter-18pt-SemiBold.ttf": "/travel-trucks/static/media/Inter-18pt-SemiBold.d52a01d17b566af4e096.ttf",
+    "static/media/Inter-18pt-Medium.ttf": "/travel-trucks/static/media/Inter-18pt-Medium.c51b145d8cf66a74cc74.ttf",
+    "static/media/Inter-18pt-Regular.ttf": "/travel-trucks/static/media/Inter-18pt-Regular.86c330c66f7333ff6202.ttf",
     "index.html": "/travel-trucks/index.html",
-    "main.48cdb441.css.map": "/travel-trucks/static/css/main.48cdb441.css.map",
-    "main.f3feb03a.js.map": "/travel-trucks/static/js/main.f3feb03a.js.map"
+    "main.e1f7adfa.css.map": "/travel-trucks/static/css/main.e1f7adfa.css.map",
+    "main.9aacd1b0.js.map": "/travel-trucks/static/js/main.9aacd1b0.js.map"
   },
   "entrypoints": [
-    "static/css/main.48cdb441.css",
-    "static/js/main.f3feb03a.js"
+    "static/css/main.e1f7adfa.css",
+    "static/js/main.9aacd1b0.js"
   ]
 }
