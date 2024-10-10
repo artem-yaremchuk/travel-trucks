@@ -2,21 +2,21 @@
 
 @font-face {
   font-family: "Inter";
-  src: url(/assets/fonts/Inter-18pt-Regular.ttf) format("truetype");
+  src: url("./assets/fonts/Inter-18pt-Regular.ttf") format("truetype");
   font-weight: normal; /* Regular */
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
-  src: url("/assets/fonts/Inter-18pt-Medium.ttf") format("truetype");
+  src: url("./assets/fonts/Inter-18pt-Medium.ttf") format("truetype");
   font-weight: 500; /* Medium */
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
-  src: url("/assets/fonts/Inter-18pt-SemiBold.ttf") format("truetype");
+  src: url("./assets/fonts/Inter-18pt-SemiBold.ttf") format("truetype");
   font-weight: 600; /* SemiBold */
   font-style: normal;
 }

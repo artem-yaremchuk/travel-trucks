@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import css from "./Header.module.css";
 
@@ -7,7 +8,7 @@ const Header = () => {
       <nav>
         <Link className={css.headerLogo} to="/">
           <svg width="136" height="16">
-            <use href="/assets/images/icons.svg#icon-logo"></use>
+            <use href="../../assets/images/icons.svg#icon-logo"></use>
           </svg>
         </Link>
         <ul className={css.headerList}>

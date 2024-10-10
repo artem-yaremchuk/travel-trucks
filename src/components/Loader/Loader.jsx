@@ -10,7 +10,6 @@ const Loader = () => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 198 93"
-            className={css.trucksvg}
           >
             <path
               strokeWidth="3"
@@ -77,7 +76,6 @@ const Loader = () => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 30 30"
-            className={css.tiresvg}
           >
             <circle
               strokeWidth="3"
@@ -93,7 +91,6 @@ const Loader = () => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 30 30"
-            className={css.tiresvg}
           >
             <circle
               strokeWidth="3"
