@@ -1,0 +1,27 @@
+.header {
+    max-width: 1440px;
+    padding: 24px 64px;
+    background-color: var(--inputs-color);
+}
+
+.headerNav {
+    display: flex;
+    gap: 450px;
+    align-items: center;
+}
+
+.logoIcon {
+    display: block;
+    width: 136px;
+    height: auto;
+}
+
+.headerList {
+    display: flex;
+    gap: 32px;
+}
+
+.headerLink {
+    font-family: "Inter Medium";
+    line-height: 1.5;
+}

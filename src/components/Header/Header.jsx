@@ -1,31 +1,37 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import styled from "styled-components";
+import { ReactComponent as Logo } from "../../assets/images/logo.svg";
 import css from "./Header.module.css";
+
+const StyledLink = styled(NavLink)`
+  &.active {
+    color: #d84343;
+  }
+`;
 
 const Header = () => {
   return (
     <header className={css.header}>
-      <nav>
+      <nav className={css.headerNav}>
         <Link className={css.headerLogo} to="/">
-          <svg width="136" height="16">
-            <use href="../../assets/images/icons.svg#icon-logo"></use>
-          </svg>
+          <Logo className={css.logoIcon} />
         </Link>
         <ul className={css.headerList}>
           <li className={css.headerListItem}>
-            <Link className={css.headerLink} to="/">
+            <StyledLink to="/" className={css.headerLink}>
               Home
-            </Link>
+            </StyledLink>
           </li>
           <li className={css.headerListItem}>
-            <Link className={css.headerLink} to="/catalog">
+            <StyledLink to="/catalog" className={css.headerLink}>
               Catalog
-            </Link>
+            </StyledLink>
           </li>
           <li className={css.headerListItem}>
-            <Link className={css.headerLink} to="/favorites">
+            <StyledLink to="/favorites" className={css.headerLink}>
               Favorites
-            </Link>
+            </StyledLink>
           </li>
         </ul>
       </nav>
