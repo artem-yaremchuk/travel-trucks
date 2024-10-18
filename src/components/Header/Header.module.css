@@ -25,3 +25,40 @@
     font-family: "Inter Medium";
     line-height: 1.5;
 }
+
+@media (max-width: 1024px) {
+    .header {
+        padding: 20px 40px;
+    }
+
+    .headerNav {
+        gap: 150px;
+    }
+
+    .logoIcon {
+        width: 120px;
+    }
+
+    .headerList {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 16px 20px;
+    }
+
+    .headerNav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .headerList {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+}
