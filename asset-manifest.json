@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/travel-trucks/static/css/main.e1f7adfa.css",
-    "main.js": "/travel-trucks/static/js/main.0cae5839.js",
-    "static/css/936.31d6cfe0.chunk.css": "/travel-trucks/static/css/936.31d6cfe0.chunk.css",
-    "static/js/936.4bf5a090.chunk.js": "/travel-trucks/static/js/936.4bf5a090.chunk.js",
+    "main.css": "/travel-trucks/static/css/main.0c090d2c.css",
+    "main.js": "/travel-trucks/static/js/main.6b4997a8.js",
+    "static/css/936.0a9f86c6.chunk.css": "/travel-trucks/static/css/936.0a9f86c6.chunk.css",
+    "static/js/936.2a515266.chunk.js": "/travel-trucks/static/js/936.2a515266.chunk.js",
     "static/js/822.0c4712d2.chunk.js": "/travel-trucks/static/js/822.0c4712d2.chunk.js",
     "static/js/957.116d7878.chunk.js": "/travel-trucks/static/js/957.116d7878.chunk.js",
     "static/js/459.68ec33dc.chunk.js": "/travel-trucks/static/js/459.68ec33dc.chunk.js",
@@ -12,13 +12,17 @@
     "static/media/Inter-18pt-SemiBold.ttf": "/travel-trucks/static/media/Inter-18pt-SemiBold.d52a01d17b566af4e096.ttf",
     "static/media/Inter-18pt-Medium.ttf": "/travel-trucks/static/media/Inter-18pt-Medium.c51b145d8cf66a74cc74.ttf",
     "static/media/Inter-18pt-Regular.ttf": "/travel-trucks/static/media/Inter-18pt-Regular.86c330c66f7333ff6202.ttf",
+    "static/media/hero-image-2x.jpg": "/travel-trucks/static/media/hero-image-2x.a063535fef6a8200bfab.jpg",
+    "static/media/hero-image.jpg": "/travel-trucks/static/media/hero-image.268f2edc2cafe665f148.jpg",
+    "static/media/logo.svg": "/travel-trucks/static/media/logo.de709d1cc58534d3e821bf7e902b7e45.svg",
     "index.html": "/travel-trucks/index.html",
-    "main.e1f7adfa.css.map": "/travel-trucks/static/css/main.e1f7adfa.css.map",
-    "main.0cae5839.js.map": "/travel-trucks/static/js/main.0cae5839.js.map",
-    "936.4bf5a090.chunk.js.map": "/travel-trucks/static/js/936.4bf5a090.chunk.js.map"
+    "main.0c090d2c.css.map": "/travel-trucks/static/css/main.0c090d2c.css.map",
+    "main.6b4997a8.js.map": "/travel-trucks/static/js/main.6b4997a8.js.map",
+    "936.0a9f86c6.chunk.css.map": "/travel-trucks/static/css/936.0a9f86c6.chunk.css.map",
+    "936.2a515266.chunk.js.map": "/travel-trucks/static/js/936.2a515266.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1f7adfa.css",
-    "static/js/main.0cae5839.js"
+    "static/css/main.0c090d2c.css",
+    "static/js/main.6b4997a8.js"
   ]
 }
