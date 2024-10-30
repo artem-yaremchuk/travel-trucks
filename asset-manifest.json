@@ -1,14 +1,15 @@
 {
   "files": {
     "main.css": "/travel-trucks/static/css/main.30b08db4.css",
-    "main.js": "/travel-trucks/static/js/main.54b43a1e.js",
+    "main.js": "/travel-trucks/static/js/main.d0e6c9c0.js",
     "static/css/936.31efb391.chunk.css": "/travel-trucks/static/css/936.31efb391.chunk.css",
-    "static/js/936.2a515266.chunk.js": "/travel-trucks/static/js/936.2a515266.chunk.js",
-    "static/js/822.0c4712d2.chunk.js": "/travel-trucks/static/js/822.0c4712d2.chunk.js",
-    "static/js/957.116d7878.chunk.js": "/travel-trucks/static/js/957.116d7878.chunk.js",
-    "static/js/459.68ec33dc.chunk.js": "/travel-trucks/static/js/459.68ec33dc.chunk.js",
-    "static/js/406.f935a62c.chunk.js": "/travel-trucks/static/js/406.f935a62c.chunk.js",
-    "static/js/733.1693e1fa.chunk.js": "/travel-trucks/static/js/733.1693e1fa.chunk.js",
+    "static/js/936.f3bc5968.chunk.js": "/travel-trucks/static/js/936.f3bc5968.chunk.js",
+    "static/css/599.31d6cfe0.chunk.css": "/travel-trucks/static/css/599.31d6cfe0.chunk.css",
+    "static/js/599.72e8ec92.chunk.js": "/travel-trucks/static/js/599.72e8ec92.chunk.js",
+    "static/js/741.59482da5.chunk.js": "/travel-trucks/static/js/741.59482da5.chunk.js",
+    "static/js/30.a8e45ea2.chunk.js": "/travel-trucks/static/js/30.a8e45ea2.chunk.js",
+    "static/js/265.41193ea8.chunk.js": "/travel-trucks/static/js/265.41193ea8.chunk.js",
+    "static/js/733.b8953fed.chunk.js": "/travel-trucks/static/js/733.b8953fed.chunk.js",
     "static/media/Inter-18pt-SemiBold.ttf": "/travel-trucks/static/media/Inter-18pt-SemiBold.d52a01d17b566af4e096.ttf",
     "static/media/Inter-18pt-Medium.ttf": "/travel-trucks/static/media/Inter-18pt-Medium.c51b145d8cf66a74cc74.ttf",
     "static/media/Inter-18pt-Regular.ttf": "/travel-trucks/static/media/Inter-18pt-Regular.86c330c66f7333ff6202.ttf",
@@ -17,12 +18,13 @@
     "static/media/logo.svg": "/travel-trucks/static/media/logo.de709d1cc58534d3e821bf7e902b7e45.svg",
     "index.html": "/travel-trucks/index.html",
     "main.30b08db4.css.map": "/travel-trucks/static/css/main.30b08db4.css.map",
-    "main.54b43a1e.js.map": "/travel-trucks/static/js/main.54b43a1e.js.map",
+    "main.d0e6c9c0.js.map": "/travel-trucks/static/js/main.d0e6c9c0.js.map",
     "936.31efb391.chunk.css.map": "/travel-trucks/static/css/936.31efb391.chunk.css.map",
-    "936.2a515266.chunk.js.map": "/travel-trucks/static/js/936.2a515266.chunk.js.map"
+    "936.f3bc5968.chunk.js.map": "/travel-trucks/static/js/936.f3bc5968.chunk.js.map",
+    "599.72e8ec92.chunk.js.map": "/travel-trucks/static/js/599.72e8ec92.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.30b08db4.css",
-    "static/js/main.54b43a1e.js"
+    "static/js/main.d0e6c9c0.js"
   ]
 }
