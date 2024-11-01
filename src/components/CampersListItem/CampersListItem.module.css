@@ -1,0 +1,8 @@
+.favoritesIcon {
+    cursor: pointer;
+    fill: var(--main-color);;
+}
+
+.favoritesIconActive {
+    fill: var(--button-color);
+}

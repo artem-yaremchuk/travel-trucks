@@ -6,6 +6,7 @@ const campersInitialState = {
   itemDetails: null,
   isLoading: false,
   error: null,
+  favorites: [],
 };
 
 const handlePending = (state) => {
@@ -20,6 +21,21 @@ const handleRejected = (state, action) => {
 const campersSlice = createSlice({
   name: "campers",
   initialState: campersInitialState,
+  reducers: {
+    toggleFavorite: (state, action) => {
+      const camper = action.payload;
+      const existingIndex = state.favorites.findIndex(
+        (item) => item.id === camper.id,
+      );
+      if (existingIndex !== -1) {
+        state.favorites = state.favorites.filter(
+          (item) => item.id !== camper.id,
+        );
+      } else {
+        state.favorites.push(camper);
+      }
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchCampers.pending, handlePending)
@@ -39,4 +55,5 @@ const campersSlice = createSlice({
   },
 });
 
+export const { toggleFavorite } = campersSlice.actions;
 export const campersReducer = campersSlice.reducer;

@@ -2,6 +2,8 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { ReactComponent as Logo } from "../../assets/images/logo.svg";
+import { useSelector } from "react-redux";
+import { selectFavorites } from "../../redux/campers/selectors";
 import css from "./Header.module.css";
 
 const StyledLink = styled(NavLink)`
@@ -11,6 +13,10 @@ const StyledLink = styled(NavLink)`
 `;
 
 const Header = () => {
+
+   const favorites = useSelector(selectFavorites);
+  const favoritesCount = favorites.length; 
+
   return (
     <header className={css.header}>
       <nav className={css.headerNav}>
@@ -31,6 +37,9 @@ const Header = () => {
           <li className={css.headerListItem}>
             <StyledLink to="/favorites" className={css.headerLink}>
               Favorites
+              {favoritesCount > 0 && (
+                <span className={css.favoritesCount}>{favoritesCount}</span>
+              )}
             </StyledLink>
           </li>
         </ul>
