@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/66.c8d6a84a.chunk.css","mappings":"AAAA,sCAEI,sBAAuB,CADvB,cAEJ,CAEA,4CACI,wBACJ","sources":["components/CampersListItem/CampersListItem.module.css"],"sourcesContent":[".favoritesIcon {\n    cursor: pointer;\n    fill: var(--main-color);;\n}\n\n.favoritesIconActive {\n    fill: var(--button-color);\n}"],"names":[],"sourceRoot":""}
