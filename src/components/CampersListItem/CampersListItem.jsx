@@ -3,17 +3,30 @@ import { useNavigate } from "react-router-dom";
 import { getCamperDetail } from "../../redux/campers/operations";
 import { selectError, selectFavorites } from "../../redux/campers/selectors";
 import { toggleFavorite } from "../../redux/campers/slice";
+import CategoriesList from "../CategoriesList/CategoriesList";
 import sprite from "../../assets/images/icons.svg";
 import css from "./CampersListItem.module.css";
 
 const CampersListItem = ({ camper }) => {
-  const { id, name, price, gallery } = camper;
+  const {
+    id,
+    name,
+    price,
+    rating,
+    location,
+    description,
+    gallery,
+    reviews,
+    ...categories
+  } = camper;
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const error = useSelector(selectError);
   const favorites = useSelector(selectFavorites);
-  console.log(favorites);
   const isFavorite = favorites.some((favCamper) => favCamper.id === id);
+
+  const [country, city] = location.split(", ");
+  const newLocation = `${city}, ${country}`;
 
   const handleShowCamperDetails = () => {
     dispatch(getCamperDetail(camper));
@@ -45,6 +58,18 @@ const CampersListItem = ({ camper }) => {
       >
         <use href={`${sprite}#icon-heart`}></use>
       </svg>
+      <svg className={css.ratingIcon} width="16" height="16">
+        <use href={`${sprite}#icon-star-yellow`}></use>
+      </svg>
+      <p className={css.camperRating}>
+        {rating}({reviews.length} Reviews)
+      </p>
+      <svg className={css.mapIcon} width="16" height="16">
+        <use href={`${sprite}#icon-map`}></use>
+      </svg>
+      <p className={css.camperLocation}>{newLocation}</p>
+      <p className={css.camperDescription}>{description}</p>
+      <CategoriesList categories={categories} />
       <button
         type="button"
         className={css.showMoreBtn}

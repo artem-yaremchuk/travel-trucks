@@ -1,3 +1,10 @@
+.camperListItem {
+    padding: 24px;
+    border: 1px solid var(--gray-light-color);
+    border-radius: 20px;
+}
+
+
 .favoritesIcon {
     cursor: pointer;
     fill: var(--main-color);;
