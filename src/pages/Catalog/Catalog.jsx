@@ -6,7 +6,7 @@ import {
   selectIsLoading,
   selectError,
 } from "../../redux/campers/selectors";
-// import Filter from "../../components/Filter/Filter";
+import Filter from "../../components/Filter/Filter";
 import CampersList from "../../components/CampersList/CampersList";
 import Loader from "../../components/Loader/Loader";
 import css from "./Catalog.module.css";
@@ -28,8 +28,8 @@ const Catalog = () => {
 
   return (
     <div className={css.catalog}>
-      {/* <Filter /> */}
-      {isLoading && !error && <Loader />}
+      <Filter />
+      {isLoading && !error && <Loader classname={css.loader} />}
       {items.length > 0 && <CampersList />}
     </div>
   );
