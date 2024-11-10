@@ -57,6 +57,7 @@
 
 .camperIconRating {
     display: flex;
+    align-items: center;
     gap: 4px;
 }
 
@@ -74,7 +75,6 @@
 .camperLocation {
     line-height: 1.5;
 }
-
 
 .camperDescription {
     max-width: 525px;

@@ -1,2 +1,107 @@
 .filterContainer {
 }
+
+.filterForm {
+    width: 360px;  
+}
+
+.locationLabel {
+    display: block;
+    color: var(--gray-color);
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.inputWrap {
+    position: relative;
+}
+
+.locationInput {
+    display: block;
+    width: 100%;
+    height: 56px;
+    padding-left: 48px;
+    padding-right: 24px;
+    background-color: var(--inputs-color);
+    border: none;
+    border-radius: 12px;
+    outline: transparent;
+    margin-bottom: 40px;
+}
+
+.mapIcon {
+    position: absolute;
+    fill: var(--gray-color);
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill var(--transition);
+}
+
+.locationInput:focus + .mapIcon {
+    fill: var(--main-color);
+}
+
+.filterTitle {
+    color: var(--text-color);
+    font-family: "Inter Medium";
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+
+.searchParamsTitle {
+    font-family: "Inter Semibold";
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 48px;
+}
+
+.searchParamsTitle:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 24px 0px;
+    background: var(--gray-light-color);
+}
+
+.equipmentList, .typeList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    margin-bottom: 32px;
+}
+
+.equipmentListItem, .typeListItem {
+    width: calc((100% - 24px)/3);
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid var(--gray-light-color);
+}
+
+.equipmentName, .typeName {
+    font-family: "Inter Medium";
+    letter-spacing: -0.005em;
+    text-align: center;
+}
+
+.searchBtn {
+    padding: 16px 56.5px;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 200px;
+    color: var(--white-color);
+    font-family: "Inter Medium";
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+    transition: background-color var(--transition);
+}
+
+.searchBtn:hover {
+    background-color: var(--button-hover-color);
+}
