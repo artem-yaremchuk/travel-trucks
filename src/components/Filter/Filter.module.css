@@ -1,6 +1,3 @@
-.filterContainer {
-}
-
 .filterForm {
     width: 360px;  
 }
@@ -12,21 +9,8 @@
     margin-bottom: 8px;
 }
 
-.inputWrap {
+.selectWrap {
     position: relative;
-}
-
-.locationInput {
-    display: block;
-    width: 100%;
-    height: 56px;
-    padding-left: 48px;
-    padding-right: 24px;
-    background-color: var(--inputs-color);
-    border: none;
-    border-radius: 12px;
-    outline: transparent;
-    margin-bottom: 40px;
 }
 
 .mapIcon {
@@ -38,7 +22,7 @@
     transition: fill var(--transition);
 }
 
-.locationInput:focus + .mapIcon {
+.focusedIcon {
     fill: var(--main-color);
 }
 
@@ -65,14 +49,14 @@
     background: var(--gray-light-color);
 }
 
-.equipmentList, .typeList {
+.equipmentList, .venicleTypeList {
     display: flex;
     flex-wrap: wrap;
     gap: 8px 12px;
     margin-bottom: 32px;
 }
 
-.equipmentListItem, .typeListItem {
+.equipmentListItem, .venicleTypeListItem {
     width: calc((100% - 24px)/3);
     height: 96px;
     display: flex;
@@ -82,9 +66,20 @@
     justify-content: center;
     border-radius: 12px;
     border: 1px solid var(--gray-light-color);
+    cursor: pointer;
+    transition: border-color var(--transition);
 }
 
-.equipmentName, .typeName {
+.equipmentListItem:hover,
+.venicleTypeListItem:hover {
+    border-color: var(--button-color);
+}
+
+.active {
+    border-color: var(--button-color);
+}
+
+.equipmentName, .venicleTypeName {
     font-family: "Inter Medium";
     letter-spacing: -0.005em;
     text-align: center;

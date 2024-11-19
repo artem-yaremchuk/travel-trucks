@@ -1,5 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchCampers, getCamperDetail } from "./operations";
+import {
+  fetchCampers,
+  getCampersByParams,
+  getCamperDetail,
+} from "./operations";
 
 const campersInitialState = {
   items: [],
@@ -35,6 +39,9 @@ const campersSlice = createSlice({
         state.favorites.push(camper);
       }
     },
+    clearItems: (state) => {
+      state.items = [];
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -45,6 +52,13 @@ const campersSlice = createSlice({
         state.items = action.payload.items;
       })
       .addCase(fetchCampers.rejected, handleRejected)
+      .addCase(getCampersByParams.pending, handlePending)
+      .addCase(getCampersByParams.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items = action.payload.items;
+      })
+      .addCase(getCampersByParams.rejected, handleRejected)
       .addCase(getCamperDetail.pending, handlePending)
       .addCase(getCamperDetail.fulfilled, (state, action) => {
         state.isLoading = false;
@@ -55,5 +69,5 @@ const campersSlice = createSlice({
   },
 });
 
-export const { toggleFavorite } = campersSlice.actions;
+export const { toggleFavorite, clearItems } = campersSlice.actions;
 export const campersReducer = campersSlice.reducer;

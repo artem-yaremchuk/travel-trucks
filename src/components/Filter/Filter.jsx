@@ -1,60 +1,130 @@
-import React from "react";
+import React, { useState } from "react";
+import Select from "react-select";
+import { useDispatch, useSelector } from "react-redux";
+import { selectFilters } from "../../redux/filters/selectors";
+import {
+  setLocation,
+  setVenicleType,
+  setEquipment,
+  resetFilters,
+} from "../../redux/filters/slice";
+import { clearItems } from "../../redux/campers/slice";
+import { getCampersByParams } from "../../redux/campers/operations";
 import sprite from "../../assets/images/icons.svg";
+import selectStyles from "./selectStyles";
 import css from "./Filter.module.css";
 
 const Filter = () => {
-  const iconsMapEquipment = {
-    AC: "icon-ac",
-    Automatic: "icon-transmission",
-    Kitchen: "icon-kitchen",
-    TV: "icon-tv",
-    Bathroom: "icon-bathroom",
+  const dispatch = useDispatch();
+  const { location, venicleType, equipment } = useSelector(selectFilters);
+  const [isFocused, setIsFocused] = useState(false);
+
+  const filtersMap = {
+    equipment: [
+      { key: "AC", icon: "icon-ac" },
+      { key: "Automatic", icon: "icon-transmission" },
+      { key: "Kitchen", icon: "icon-kitchen" },
+      { key: "TV", icon: "icon-tv" },
+      { key: "Bathroom", icon: "icon-bathroom" },
+    ],
+    venicleType: [
+      { key: "Panel Truck", icon: "icon-van" },
+      { key: "Fully Integrated", icon: "icon-fully-integrated" },
+      { key: "Alcove", icon: "icon-alcove" },
+    ],
   };
 
-  const iconsMapType = {
-    Van: "icon-van",
-    "Fully Integrated": "icon-fully-integrated",
-    Alcove: "icon-alcove",
+  const cities = [
+    { value: "Kyiv, Ukraine", label: "Kyiv, Ukraine" },
+    { value: "Dnipro, Ukraine", label: "Dnipro, Ukraine" },
+    { value: "Lviv, Ukraine", label: "Lviv, Ukraine" },
+    { value: "Odesa, Ukraine", label: "Odesa, Ukraine" },
+    { value: "Kharkiv, Ukraine", label: "Kharkiv, Ukraine" },
+    { value: "Sumy, Ukraine", label: "Sumy, Ukraine" },
+    { value: "Poltava, Ukraine", label: "Poltava, Ukraine" },
+  ];
+
+  const handleLocationChange = (selectedOption) => {
+    dispatch(setLocation(selectedOption ? selectedOption.value : null));
+  };
+
+  const handleVenicleTypeChange = (type) => {
+    dispatch(setVenicleType(type === venicleType ? null : type));
+  };
+
+  const handleEquipmentChange = (equipmentItem) => {
+    const updatedEquipment = equipment.includes(equipmentItem)
+      ? equipment.filter((item) => item !== equipmentItem)
+      : [...equipment, equipmentItem];
+    dispatch(setEquipment(updatedEquipment));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(clearItems());
+    dispatch(getCampersByParams({ location, venicleType, equipment }));
+    dispatch(resetFilters());
   };
 
   return (
     <div className={css.filterContainer}>
-      <form className={css.filterForm} autoComplete="off">
-        <label htmlFor="locationInput" className={css.locationLabel}>
-          Location
-        </label>
-        <div className={css.inputWrap}>
-          <input
-            type="text"
-            name="location"
-            className={css.locationInput}
-            id="locationInput"
-            placeholder="City"
+      <form
+        onSubmit={handleSubmit}
+        className={css.filterForm}
+        autoComplete="off"
+      >
+        <label className={css.locationLabel}>Location</label>
+        <div className={css.selectWrap}>
+          <Select
+            options={cities}
+            placeholder="Select a city"
+            styles={selectStyles}
+            onChange={handleLocationChange}
+            isClearable
+            value={cities.find((city) => city.value === location) || null}
+            onFocus={() => setIsFocused(true)}
+            onBlur={() => setIsFocused(false)}
           />
-          <svg className={css.mapIcon} width="20" height="20">
+          <svg
+            className={`${css.mapIcon} ${isFocused ? css.focusedIcon : ""}`}
+            width="20"
+            height="20"
+          >
             <use href={`${sprite}#icon-map`}></use>
           </svg>
         </div>
         <p className={css.filterTitle}>Filters</p>
-        <h3 className={css.searchParamsTitle}>Vehicle equipment</h3>
+        <h3 className={css.searchParamsTitle}>Venicle equipment</h3>
         <ul className={css.equipmentList}>
-          {Object.keys(iconsMapEquipment).map((key) => (
-            <li key={key} className={css.equipmentListItem}>
+          {filtersMap.equipment.map(({ key, icon }) => (
+            <li
+              key={key}
+              className={`${css.equipmentListItem} ${
+                equipment.includes(key) ? css.active : ""
+              }`}
+              onClick={() => handleEquipmentChange(key)}
+            >
               <svg className={css.equipmentIcon} width="32" height="32">
-                <use href={`${sprite}#${iconsMapEquipment[key]}`}></use>
+                <use href={`${sprite}#${icon}`}></use>
               </svg>
               <span className={css.equipmentName}>{key}</span>
             </li>
           ))}
         </ul>
-        <h3 className={css.searchParamsTitle}>Vehicle type</h3>
-        <ul className={css.typeList}>
-          {Object.keys(iconsMapType).map((key) => (
-            <li key={key} className={css.typeListItem}>
-              <svg className={css.typeIcon} width="32" height="32">
-                <use href={`${sprite}#${iconsMapType[key]}`}></use>
+        <h3 className={css.searchParamsTitle}>Venicle type</h3>
+        <ul className={css.venicleTypeList}>
+          {filtersMap.venicleType.map(({ key, icon }) => (
+            <li
+              key={key}
+              className={`${css.venicleTypeListItem} ${
+                venicleType === key ? css.active : ""
+              }`}
+              onClick={() => handleVenicleTypeChange(key)}
+            >
+              <svg className={css.venicleTypeIcon} width="32" height="32">
+                <use href={`${sprite}#${icon}`}></use>
               </svg>
-              <span className={css.typeName}>{key}</span>
+              <span className={css.venicleTypeName}>{key}</span>
             </li>
           ))}
         </ul>

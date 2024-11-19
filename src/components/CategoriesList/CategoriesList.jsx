@@ -24,7 +24,9 @@ const CategoriesList = ({ categories }) => {
             <svg className={css.categoryIcon} width="16" height="16">
               <use href={`${sprite}#${iconsMap[key]}`}></use>
             </svg>
-            <span className={css.categoryName}>{key}</span>
+            <span className={css.categoryName}>
+              {typeof categories[key] === "string" ? categories[key] : key}
+            </span>
           </li>
         ) : null,
       )}
