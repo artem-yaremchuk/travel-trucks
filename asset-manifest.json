@@ -1,17 +1,18 @@
 {
   "files": {
     "main.css": "/travel-trucks/static/css/main.fdc9f230.css",
-    "main.js": "/travel-trucks/static/js/main.0ee78d2d.js",
+    "main.js": "/travel-trucks/static/js/main.1db33edd.js",
     "static/css/936.31efb391.chunk.css": "/travel-trucks/static/css/936.31efb391.chunk.css",
     "static/js/936.f3bc5968.chunk.js": "/travel-trucks/static/js/936.f3bc5968.chunk.js",
-    "static/css/516.b637e17e.chunk.css": "/travel-trucks/static/css/516.b637e17e.chunk.css",
-    "static/js/516.1c623a9a.chunk.js": "/travel-trucks/static/js/516.1c623a9a.chunk.js",
+    "static/css/117.0af473ae.chunk.css": "/travel-trucks/static/css/117.0af473ae.chunk.css",
+    "static/js/117.d118a115.chunk.js": "/travel-trucks/static/js/117.d118a115.chunk.js",
     "static/js/741.59482da5.chunk.js": "/travel-trucks/static/js/741.59482da5.chunk.js",
     "static/js/30.a8e45ea2.chunk.js": "/travel-trucks/static/js/30.a8e45ea2.chunk.js",
     "static/js/265.41193ea8.chunk.js": "/travel-trucks/static/js/265.41193ea8.chunk.js",
     "static/css/979.f9cedc23.chunk.css": "/travel-trucks/static/css/979.f9cedc23.chunk.css",
     "static/js/979.df7e683f.chunk.js": "/travel-trucks/static/js/979.df7e683f.chunk.js",
-    "static/js/545.d790fa1c.chunk.js": "/travel-trucks/static/js/545.d790fa1c.chunk.js",
+    "static/js/501.d4073b0a.chunk.js": "/travel-trucks/static/js/501.d4073b0a.chunk.js",
+    "static/js/545.4e0c395f.chunk.js": "/travel-trucks/static/js/545.4e0c395f.chunk.js",
     "static/media/Inter-18pt-SemiBold.ttf": "/travel-trucks/static/media/Inter-18pt-SemiBold.d52a01d17b566af4e096.ttf",
     "static/media/Inter-18pt-Medium.ttf": "/travel-trucks/static/media/Inter-18pt-Medium.c51b145d8cf66a74cc74.ttf",
     "static/media/Inter-18pt-Regular.ttf": "/travel-trucks/static/media/Inter-18pt-Regular.86c330c66f7333ff6202.ttf",
@@ -21,17 +22,18 @@
     "static/media/logo.svg": "/travel-trucks/static/media/logo.de709d1cc58534d3e821bf7e902b7e45.svg",
     "index.html": "/travel-trucks/index.html",
     "main.fdc9f230.css.map": "/travel-trucks/static/css/main.fdc9f230.css.map",
-    "main.0ee78d2d.js.map": "/travel-trucks/static/js/main.0ee78d2d.js.map",
+    "main.1db33edd.js.map": "/travel-trucks/static/js/main.1db33edd.js.map",
     "936.31efb391.chunk.css.map": "/travel-trucks/static/css/936.31efb391.chunk.css.map",
     "936.f3bc5968.chunk.js.map": "/travel-trucks/static/js/936.f3bc5968.chunk.js.map",
-    "516.b637e17e.chunk.css.map": "/travel-trucks/static/css/516.b637e17e.chunk.css.map",
-    "516.1c623a9a.chunk.js.map": "/travel-trucks/static/js/516.1c623a9a.chunk.js.map",
+    "117.0af473ae.chunk.css.map": "/travel-trucks/static/css/117.0af473ae.chunk.css.map",
+    "117.d118a115.chunk.js.map": "/travel-trucks/static/js/117.d118a115.chunk.js.map",
     "979.f9cedc23.chunk.css.map": "/travel-trucks/static/css/979.f9cedc23.chunk.css.map",
     "979.df7e683f.chunk.js.map": "/travel-trucks/static/js/979.df7e683f.chunk.js.map",
-    "545.d790fa1c.chunk.js.map": "/travel-trucks/static/js/545.d790fa1c.chunk.js.map"
+    "501.d4073b0a.chunk.js.map": "/travel-trucks/static/js/501.d4073b0a.chunk.js.map",
+    "545.4e0c395f.chunk.js.map": "/travel-trucks/static/js/545.4e0c395f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fdc9f230.css",
-    "static/js/main.0ee78d2d.js"
+    "static/js/main.1db33edd.js"
   ]
 }
