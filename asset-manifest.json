@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/travel-trucks/static/css/main.fdc9f230.css",
-    "main.js": "/travel-trucks/static/js/main.04234c31.js",
+    "main.js": "/travel-trucks/static/js/main.532c837a.js",
     "static/css/936.31efb391.chunk.css": "/travel-trucks/static/css/936.31efb391.chunk.css",
     "static/js/936.f3bc5968.chunk.js": "/travel-trucks/static/js/936.f3bc5968.chunk.js",
     "static/css/486.fd7b7d8e.chunk.css": "/travel-trucks/static/css/486.fd7b7d8e.chunk.css",
-    "static/js/486.bdca1db9.chunk.js": "/travel-trucks/static/js/486.bdca1db9.chunk.js",
+    "static/js/486.ff89e249.chunk.js": "/travel-trucks/static/js/486.ff89e249.chunk.js",
     "static/js/741.59482da5.chunk.js": "/travel-trucks/static/js/741.59482da5.chunk.js",
     "static/js/30.a8e45ea2.chunk.js": "/travel-trucks/static/js/30.a8e45ea2.chunk.js",
     "static/js/265.41193ea8.chunk.js": "/travel-trucks/static/js/265.41193ea8.chunk.js",
@@ -22,11 +22,11 @@
     "static/media/logo.svg": "/travel-trucks/static/media/logo.de709d1cc58534d3e821bf7e902b7e45.svg",
     "index.html": "/travel-trucks/index.html",
     "main.fdc9f230.css.map": "/travel-trucks/static/css/main.fdc9f230.css.map",
-    "main.04234c31.js.map": "/travel-trucks/static/js/main.04234c31.js.map",
+    "main.532c837a.js.map": "/travel-trucks/static/js/main.532c837a.js.map",
     "936.31efb391.chunk.css.map": "/travel-trucks/static/css/936.31efb391.chunk.css.map",
     "936.f3bc5968.chunk.js.map": "/travel-trucks/static/js/936.f3bc5968.chunk.js.map",
     "486.fd7b7d8e.chunk.css.map": "/travel-trucks/static/css/486.fd7b7d8e.chunk.css.map",
-    "486.bdca1db9.chunk.js.map": "/travel-trucks/static/js/486.bdca1db9.chunk.js.map",
+    "486.ff89e249.chunk.js.map": "/travel-trucks/static/js/486.ff89e249.chunk.js.map",
     "979.f9cedc23.chunk.css.map": "/travel-trucks/static/css/979.f9cedc23.chunk.css.map",
     "979.df7e683f.chunk.js.map": "/travel-trucks/static/js/979.df7e683f.chunk.js.map",
     "501.d4073b0a.chunk.js.map": "/travel-trucks/static/js/501.d4073b0a.chunk.js.map",
@@ -34,6 +34,6 @@
   },
   "entrypoints": [
     "static/css/main.fdc9f230.css",
-    "static/js/main.04234c31.js"
+    "static/js/main.532c837a.js"
   ]
 }
