@@ -35,11 +35,15 @@ export const getCampersByParams = createAsyncThunk(
       };
 
       equipment.forEach((item) => {
-        if (item === "Automatic") params.transmission = item;
-        if (item === "AC") params.AC = true;
-        if (item === "TV") params.TV = true;
-        if (item === "Bathroom") params.bathroom = true;
-        if (item === "Kitchen") params.kitchen = true;
+        if (item === "Automatic") {
+          params.transmission = item;
+        } else if (item === "AC") {
+          params.AC = true;
+        } else if (item === "TV") {
+          params.TV = true;
+        } else {
+          params[item.toLowerCase()] = true;
+        }
       });
 
       const response = await axios.get("/campers", { params });

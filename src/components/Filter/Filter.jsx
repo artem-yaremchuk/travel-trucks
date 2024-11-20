@@ -8,7 +8,7 @@ import {
   setEquipment,
   resetFilters,
 } from "../../redux/filters/slice";
-import { clearItems } from "../../redux/campers/slice";
+import { resetCampers } from "../../redux/campers/slice";
 import { getCampersByParams } from "../../redux/campers/operations";
 import sprite from "../../assets/images/icons.svg";
 import selectStyles from "./selectStyles";
@@ -26,6 +26,11 @@ const Filter = () => {
       { key: "Kitchen", icon: "icon-kitchen" },
       { key: "TV", icon: "icon-tv" },
       { key: "Bathroom", icon: "icon-bathroom" },
+      { key: "Radio", icon: "icon-radio" },
+      { key: "Refrigerator", icon: "icon-refrigerator" },
+      { key: "Microwave", icon: "icon-microwave" },
+      { key: "Gas", icon: "icon-gas" },
+      { key: "Water", icon: "icon-water"},
     ],
     venicleType: [
       { key: "Panel Truck", icon: "icon-van" },
@@ -61,10 +66,12 @@ const Filter = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(clearItems());
+    dispatch(resetCampers());
     dispatch(getCampersByParams({ location, venicleType, equipment }));
     dispatch(resetFilters());
   };
+
+  const isSearchDisabled = !location && !venicleType && equipment.length === 0;
 
   return (
     <div className={css.filterContainer}>
@@ -128,7 +135,7 @@ const Filter = () => {
             </li>
           ))}
         </ul>
-        <button type="submit" className={css.searchBtn}>
+        <button type="submit" className={css.searchBtn} disabled={isSearchDisabled}>
           Search
         </button>
       </form>

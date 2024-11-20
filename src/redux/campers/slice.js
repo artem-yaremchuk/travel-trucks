@@ -7,10 +7,13 @@ import {
 
 const campersInitialState = {
   items: [],
+  visibleItems: [],
+  total: 0,
   itemDetails: null,
   isLoading: false,
   error: null,
   favorites: [],
+  limit: 4,
 };
 
 const handlePending = (state) => {
@@ -26,6 +29,15 @@ const campersSlice = createSlice({
   name: "campers",
   initialState: campersInitialState,
   reducers: {
+    loadMoreCampers: (state) => {
+      const currentLength = state.visibleItems.length;
+      const nextItems = state.items.slice(
+        currentLength,
+        currentLength + state.limit
+      );
+
+      state.visibleItems = [...state.visibleItems, ...nextItems];
+    },
     toggleFavorite: (state, action) => {
       const camper = action.payload;
       const existingIndex = state.favorites.findIndex(
@@ -39,8 +51,9 @@ const campersSlice = createSlice({
         state.favorites.push(camper);
       }
     },
-    clearItems: (state) => {
+    resetCampers: (state) => {
       state.items = [];
+      state.visibleItems = [];
     },
   },
   extraReducers: (builder) => {
@@ -50,6 +63,9 @@ const campersSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.items = action.payload.items;
+        state.total = action.payload.total;
+
+        state.visibleItems = state.items.slice(0, state.limit);
       })
       .addCase(fetchCampers.rejected, handleRejected)
       .addCase(getCampersByParams.pending, handlePending)
@@ -57,6 +73,9 @@ const campersSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.items = action.payload.items;
+        state.total = action.payload.items.length;
+
+        state.visibleItems = state.items.slice(0, state.limit);
       })
       .addCase(getCampersByParams.rejected, handleRejected)
       .addCase(getCamperDetail.pending, handlePending)
@@ -69,5 +88,5 @@ const campersSlice = createSlice({
   },
 });
 
-export const { toggleFavorite, clearItems } = campersSlice.actions;
+export const { loadMoreCampers, toggleFavorite, resetCampers } = campersSlice.actions;
 export const campersReducer = campersSlice.reducer;

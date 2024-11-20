@@ -1,0 +1,14 @@
+.loadMoreBtn {
+    padding: 16px 32px;
+    background-color: transparent;
+    border: 1px solid var(--gray-light-color);
+    border-radius: 200px;
+    font-family: "Inter Medium";
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+    transition: border-color var(--transition);
+}
+
+.loadMoreBtn:hover {
+    border-color: var(--button-hover-color);
+}

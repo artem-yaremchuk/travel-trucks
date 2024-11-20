@@ -1,31 +1,44 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { loadMoreCampers } from "../../redux/campers/slice";
 import { fetchCampers } from "../../redux/campers/operations";
 import {
-  selectItems,
+  selectVisibleItems,
   selectIsLoading,
   selectError,
+  selectTotal,
 } from "../../redux/campers/selectors";
 import Filter from "../../components/Filter/Filter";
 import CampersList from "../../components/CampersList/CampersList";
 import Loader from "../../components/Loader/Loader";
+import LoadMoreBtn from "../../components/LoadMoreBtn/LoadMoreBtn";
 import css from "./Catalog.module.css";
 
 const Catalog = () => {
   const dispatch = useDispatch();
-  const items = useSelector(selectItems);
+  const visibleItems = useSelector(selectVisibleItems);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
+  const total = useSelector(selectTotal);
 
   useEffect(() => {
     dispatch(fetchCampers());
   }, [dispatch]);
 
+  const handleLoadMore = () => {
+    dispatch(loadMoreCampers());
+  };
+
   return (
     <div className={css.catalog}>
       <Filter />
       {isLoading && !error && <Loader className={css.loader} />}
-      {items.length > 0 && <CampersList />}
+      <div className={css.listBtn}>
+        {visibleItems.length > 0 && <CampersList />}
+        {visibleItems.length < total && (
+          <LoadMoreBtn handleLoad={handleLoadMore} />
+        )}
+      </div>
     </div>
   );
 };
