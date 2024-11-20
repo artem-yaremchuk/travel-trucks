@@ -29,15 +29,15 @@ const Catalog = () => {
     dispatch(loadMoreCampers());
   };
 
+  const showLoadMoreButton = !isLoading && visibleItems.length < total;
+
   return (
     <div className={css.catalog}>
       <Filter />
       {isLoading && !error && <Loader className={css.loader} />}
       <div className={css.listBtn}>
-        {visibleItems.length > 0 && <CampersList />}
-        {visibleItems.length < total && (
-          <LoadMoreBtn handleLoad={handleLoadMore} />
-        )}
+        {!isLoading && visibleItems.length > 0 && <CampersList />}
+        {showLoadMoreButton && <LoadMoreBtn handleLoad={handleLoadMore} />}
       </div>
     </div>
   );

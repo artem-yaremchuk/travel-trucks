@@ -54,6 +54,7 @@ const campersSlice = createSlice({
     resetCampers: (state) => {
       state.items = [];
       state.visibleItems = [];
+      state.total = 0;
     },
   },
   extraReducers: (builder) => {
