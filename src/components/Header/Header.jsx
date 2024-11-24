@@ -13,9 +13,8 @@ const StyledLink = styled(NavLink)`
 `;
 
 const Header = () => {
-
-   const favorites = useSelector(selectFavorites);
-  const favoritesCount = favorites.length; 
+  const favorites = useSelector(selectFavorites);
+  const favoritesCount = favorites.length;
 
   return (
     <header className={css.header}>
