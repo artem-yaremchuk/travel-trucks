@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { selectItemDetails } from "../../redux/campers/selectors";
-import CategoriesList from "../../components/CategoriesList/CategoriesList";
+import { selectItemDetails } from "../../../redux/campers/selectors";
+import CategoriesList from "../../../components/CategoriesList/CategoriesList";
 import css from "./Features.module.css";
 
 const Features = () => {

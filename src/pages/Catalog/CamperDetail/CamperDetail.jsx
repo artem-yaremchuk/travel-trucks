@@ -1,18 +1,32 @@
 import React, { Suspense } from "react";
 import { useSelector } from "react-redux";
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
+import styled from "styled-components";
 import {
   selectItemDetails,
   selectIsLoading,
-} from "../../redux/campers/selectors.js";
-import BookingForm from "../../components/BookingForm/BookingForm.jsx";
-import Loader from "../../components/Loader/Loader.jsx";
-import sprite from "../../assets/images/icons.svg";
+} from "../../../redux/campers/selectors";
+import BookingForm from "../../../components/BookingForm/BookingForm";
+import Loader from "../../../components/Loader/Loader.jsx";
+import sprite from "../../../assets/images/icons.svg";
 import css from "./CamperDetail.module.css";
 
 const CamperDetail = () => {
+  const StyledLink = styled(NavLink)`
+    &.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -27px;
+      width: 100%;
+      height: 5px;
+      background-color: var(--button-color);
+    }
+  `;
+
   const isLoading = useSelector(selectIsLoading);
   const itemDetails = useSelector(selectItemDetails);
+  const featuresLocation = useLocation();
 
   if (!itemDetails) {
     return;
@@ -23,6 +37,10 @@ const CamperDetail = () => {
 
   const [country, city] = location.split(", ");
   const newLocation = `${city}, ${country}`;
+
+  const isFeaturesActive =
+    featuresLocation.pathname === `/catalog/${id}` ||
+    featuresLocation.pathname === `/catalog/${id}/features`;
 
   return (
     <>
@@ -64,17 +82,20 @@ const CamperDetail = () => {
           <div className={css.addInfo}>
             <ul className={css.addInfoLinks}>
               <li>
-                <Link
+                <StyledLink
                   to={`/catalog/${id}/features`}
-                  className={css.featuresLink}
+                  className={`${css.featuresLink} ${isFeaturesActive ? "active" : ""}`}
                 >
                   Features
-                </Link>
+                </StyledLink>
               </li>
               <li>
-                <Link to={`/catalog/${id}/reviews`} className={css.reviewsLink}>
+                <StyledLink
+                  to={`/catalog/${id}/reviews`}
+                  className={css.reviewsLink}
+                >
                   Reviews
-                </Link>
+                </StyledLink>
               </li>
             </ul>
           </div>
