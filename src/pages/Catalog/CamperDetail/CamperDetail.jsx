@@ -11,8 +11,7 @@ import Loader from "../../../components/Loader/Loader.jsx";
 import sprite from "../../../assets/images/icons.svg";
 import css from "./CamperDetail.module.css";
 
-const CamperDetail = () => {
-  const StyledLink = styled(NavLink)`
+const StyledLink = styled(NavLink)`
     &.active::after {
       content: "";
       position: absolute;
@@ -24,6 +23,7 @@ const CamperDetail = () => {
     }
   `;
 
+const CamperDetail = () => {
   const isLoading = useSelector(selectIsLoading);
   const itemDetails = useSelector(selectItemDetails);
   const featuresLocation = useLocation();
@@ -99,10 +99,12 @@ const CamperDetail = () => {
               </li>
             </ul>
           </div>
-          <Suspense fallback={<Loader />}>
-            <Outlet />
-          </Suspense>
-          <BookingForm />
+          <div className={css.outletBookingForm}>
+            <Suspense fallback={<Loader />}>
+              <Outlet />
+            </Suspense>
+            <BookingForm />
+          </div>
         </div>
       )}
     </>

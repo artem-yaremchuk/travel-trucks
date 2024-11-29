@@ -37,3 +37,9 @@
     line-height: 1.5;
     color: var(--text-color);
 }
+
+.noReviews {
+    width: 631px;
+    line-height: 1.5;
+    color: var(--text-color);
+}

@@ -88,3 +88,8 @@
     line-height: 1.2;
     position: relative;
 }
+
+.outletBookingForm {
+    display: flex;
+    gap: 40px;
+}
