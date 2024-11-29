@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { useSelector } from "react-redux";
-import { NavLink, Outlet, useLocation } from "react-router-dom";
-import styled from "styled-components";
+import { Outlet, useLocation } from "react-router-dom";
+import StyledLink from "./StyledLink";
 import {
   selectItemDetails,
   selectIsLoading,
@@ -10,18 +10,6 @@ import BookingForm from "../../../components/BookingForm/BookingForm";
 import Loader from "../../../components/Loader/Loader.jsx";
 import sprite from "../../../assets/images/icons.svg";
 import css from "./CamperDetail.module.css";
-
-const StyledLink = styled(NavLink)`
-    &.active::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -27px;
-      width: 100%;
-      height: 5px;
-      background-color: var(--button-color);
-    }
-  `;
 
 const CamperDetail = () => {
   const isLoading = useSelector(selectIsLoading);
