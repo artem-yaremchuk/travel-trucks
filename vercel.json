@@ -1,8 +1,13 @@
 {
-  "rewrites": [
+  "headers": [
     {
       "source": "/manifest.json",
-      "destination": "/public/manifest.json"
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
     }
   ]
 }
