@@ -66,7 +66,7 @@ The project is built using:
 
 
 ### Mockup
-The design follows provided mockups. While not mandatory, mobile responsiveness has been implemented for better usability.
+The design follows provided [mockups](https://www.figma.com/design/6vTbzaB3EPgOreQz2jOJJe/Campers?node-id=0-1&t=wWUj9PeSd7v1KZ5q-1). While not mandatory, mobile responsiveness has been implemented for better usability.
 
 ---
 
