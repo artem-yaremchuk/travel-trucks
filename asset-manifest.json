@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/travel-trucks/static/css/main.888e5cff.css",
-    "main.js": "/travel-trucks/static/js/main.b77ffdfa.js",
-    "static/css/936.1a77b4f8.chunk.css": "/travel-trucks/static/css/936.1a77b4f8.chunk.css",
+    "main.css": "/travel-trucks/static/css/main.75538f3c.css",
+    "main.js": "/travel-trucks/static/js/main.e807468d.js",
+    "static/css/936.2f8bb29b.chunk.css": "/travel-trucks/static/css/936.2f8bb29b.chunk.css",
     "static/js/936.f3bc5968.chunk.js": "/travel-trucks/static/js/936.f3bc5968.chunk.js",
     "static/css/250.47d75d1c.chunk.css": "/travel-trucks/static/css/250.47d75d1c.chunk.css",
     "static/js/250.624e5f3a.chunk.js": "/travel-trucks/static/js/250.624e5f3a.chunk.js",
@@ -26,9 +26,9 @@
     "static/media/icons.svg": "/travel-trucks/static/media/icons.1c9ff0ca0936a802324517f2b4cc5d6b.svg",
     "static/media/logo.svg": "/travel-trucks/static/media/logo.de709d1cc58534d3e821bf7e902b7e45.svg",
     "index.html": "/travel-trucks/index.html",
-    "main.888e5cff.css.map": "/travel-trucks/static/css/main.888e5cff.css.map",
-    "main.b77ffdfa.js.map": "/travel-trucks/static/js/main.b77ffdfa.js.map",
-    "936.1a77b4f8.chunk.css.map": "/travel-trucks/static/css/936.1a77b4f8.chunk.css.map",
+    "main.75538f3c.css.map": "/travel-trucks/static/css/main.75538f3c.css.map",
+    "main.e807468d.js.map": "/travel-trucks/static/js/main.e807468d.js.map",
+    "936.2f8bb29b.chunk.css.map": "/travel-trucks/static/css/936.2f8bb29b.chunk.css.map",
     "936.f3bc5968.chunk.js.map": "/travel-trucks/static/js/936.f3bc5968.chunk.js.map",
     "250.47d75d1c.chunk.css.map": "/travel-trucks/static/css/250.47d75d1c.chunk.css.map",
     "250.624e5f3a.chunk.js.map": "/travel-trucks/static/js/250.624e5f3a.chunk.js.map",
@@ -46,7 +46,7 @@
     "763.853323d7.chunk.js.map": "/travel-trucks/static/js/763.853323d7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.888e5cff.css",
-    "static/js/main.b77ffdfa.js"
+    "static/css/main.75538f3c.css",
+    "static/js/main.e807468d.js"
   ]
 }
