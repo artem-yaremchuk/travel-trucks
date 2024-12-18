@@ -15,3 +15,9 @@
     align-items: center;
     gap: 32px;
 }
+
+@media screen and (max-width: 767px) {
+    .favoritesPage {
+        padding: 48px 15px 48px 15px;
+    }
+}
