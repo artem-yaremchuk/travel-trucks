@@ -19,3 +19,9 @@
     line-height: 1.5;
     text-transform: capitalize;
 }
+
+@media screen and (max-width: 767px) {
+    .categoryName {
+        font-size: 14px;
+    }
+}

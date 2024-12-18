@@ -7,7 +7,7 @@ import css from "./Reviews.module.css";
 const Reviews = () => {
   const itemDetails = useSelector(selectItemDetails);
   const { reviews } = itemDetails;
-
+  
   if (!reviews) {
     return;
   }

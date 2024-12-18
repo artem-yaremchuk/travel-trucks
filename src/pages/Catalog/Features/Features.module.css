@@ -36,3 +36,17 @@
 .venicleDetailsItem:first-child .detailValue {
     text-transform: capitalize;
 }
+
+@media screen and (max-width: 767px) {
+    .features {
+        padding: 22px 20px;
+    }
+
+    .venicleTitle {
+        margin-top: 38px;
+    }
+
+    .venicleTitle:after {
+        margin: 18px 0px;
+    }
+}

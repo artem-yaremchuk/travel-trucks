@@ -101,3 +101,40 @@
 .showMoreBtn:hover {
     background-color: var(--button-hover-color);
 }
+
+@media screen and (max-width: 1439px) {
+    .camperListItem {
+        max-width: 640px;
+    }
+
+    .camperMainInfo {
+        flex-direction: column;
+    }
+
+    .camperImage {
+        width: 100%;
+    }
+
+    .camperDescription {
+        max-width: 590px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .camperListItem {
+        width: 340px;
+        padding: 12px;
+    }
+    
+    .camperName {
+        font-size: 18px;
+    }
+    
+    .camperPrice {
+        font-size: 18px;
+    }
+
+     .camperDescription {
+        max-width: 314px;
+    }
+}

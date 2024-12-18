@@ -45,6 +45,7 @@
 
 .galleryList {
     display: flex;
+    flex-wrap: wrap;
     gap: 48px;
     margin-bottom: 28px;
 }
@@ -92,4 +93,42 @@
 .outletBookingForm {
     display: flex;
     gap: 40px;
+}
+
+@media screen and (max-width: 1439px) {
+    .camperDetail {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+   .galleryList {
+        gap: 36px;
+    }
+
+    .outletBookingForm {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .camperDetail {
+        max-width: 375px;
+        padding: 24px 17.5px 40px 17.5px;
+    }
+
+    .galleryList {
+        gap: 24px;
+    }
+
+    .camperName {
+        font-size: 18px;
+    }
+
+    .camperPrice {
+        font-size: 18px;
+    }
+
+    .camperDescription {
+        margin-bottom: 40px;
+    }
 }

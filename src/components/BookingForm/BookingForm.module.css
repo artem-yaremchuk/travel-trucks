@@ -119,3 +119,24 @@
 .sendBtn:hover {
     background-color: var(--button-hover-color);
 }
+
+@media screen and (max-width: 1439px) {
+    .bookingFormWrap {
+        width: 631px;
+    }
+
+    .inputDate {
+        width: 515px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+     .bookingFormWrap {
+        width: 340px;
+        padding: 22px 20px;
+    }
+
+    .inputDate {
+        width: 293px;
+    }
+}
