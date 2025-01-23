@@ -6,6 +6,7 @@
     background-size: cover;
     max-width: 1440px;
     padding: 260px 805px 260px 64px;
+    margin: 0 auto;
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -57,7 +58,6 @@
     .hero {
         max-width: 768px;
         padding: 260px 64px 260px 64px;
-        margin: 0 auto;
     }
 
     .heroTitle {
