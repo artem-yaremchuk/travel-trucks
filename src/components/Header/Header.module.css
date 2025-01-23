@@ -2,6 +2,7 @@
     max-width: 1440px;
     padding: 24px 64px;
     background-color: var(--inputs-color);
+    margin: 0 auto;
 }
 
 .headerNav {
@@ -43,7 +44,6 @@
 @media screen and (max-width: 1439px ) {
     .header {
         max-width: 768px;
-        margin: 0 auto;
     }
 
     .headerNav {
